@@ -100,7 +100,7 @@ export default {
       default ( option, mutatedLabel ) {
         let currentLabel = mutatedLabel || this.label;
         if ( typeof option === 'object' ) {
-          if ( currentLabel && typeof currentLabel === 'string' && option[ currentLabel ] ) {
+          if ( currentLabel && typeof currentLabel === 'string' && option[ currentLabel ] !== undefined ) {
             return option[ currentLabel ]
           } else if ( currentLabel.includes( '.' ) ) {
             mutatedLabel = currentLabel.split( '.' )
